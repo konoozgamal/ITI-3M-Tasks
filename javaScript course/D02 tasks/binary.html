@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: cornflowerblue;
+            margin:auto;
+            font-size: 25px;
+        }
+      label {
+      text-align: center;
+    }
+    input{
+        padding: 12px;
+        margin: 4px;
+        border-radius: 10px;
+        border: none;
+    }
+    p{
+        color: brown;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+        <h3>convert number from binary to integer</h3>
+            <label>Binary number </label>
+            <input id="binary" type="text"  oninput={main()} /><br>
+            <label>Integer number </label> 
+            <input id="integer" type="text" oninput={main_2()} />
+        <div>
+            <p id="user"></p>
+         </div>
+    <script>
+          let binary = document.getElementById("binary");
+        let integer = document.getElementById("integer");
+        let user = document.getElementById("user");
+        
+        function main(){
+            let main_4 = /[0-1]/.test(binary.value);
+            if(main_4){
+                user.innerText="";
+              integer.value = parseInt(binary.value,2)
+            }
+            else{
+                user.innerText="Erorr Please Enter binary number";
+            }
+        }
+        function main_2(){
+            let main_8 = /[0-9]/.test(integer.value);
+            if(main_8){ 
+                user.innerText="";
+                binary.value = parseInt(integer.value, 10).toString(2).padStart(4, "0")
+            }
+            else{
+                user.innerText="Erorr Please Enter integer number"
+            }
+        }
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(120, 147, 197);
+        color: white;
+         font-size: 25px;
+    }
+</style>
+<body>
+    <h1>entering user info</h1>
+    <hr>
+    <script>
+        const nem=prompt("please enter your name:")
+        const phon=prompt("please enter your telephone number:");
+        const mobile=prompt("please enter your mobile number: ");
+        const email=prompt("please enter your email address : ");
+        const date=new Date();
+        const date_2=date.toLocaleDateString('en-Us',{day:"numeric",month:"long",year:"numeric"});
+
+        
+        document.write('welcome dear : ' + nem);
+        document.write('<br> Your phone number is : ' +phon);
+        document.write('<br> your mobile number is : ' +mobile);
+         document.write('<br> your email address is : ' +email);
+        // document.write('<br> <br> <br> <br> Today is Tue Sep 29 2020');
+        document.write('<br> <br>Today : ' + date_2);
+    </script>
+</body>
+</html>
