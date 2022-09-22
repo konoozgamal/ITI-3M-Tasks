@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Object</title>
+</head>
+<body>
+    <script>
+     let user = []
+    for(let counter = 0; counter <4; counter++){
+        user.push(+prompt("please enter value you want to calc"))
+    }
+
+    function calc (operation) {
+        let result = user[0]
+        for(let counter =1; counter < user.length; counter++){
+           
+            switch(operation){
+                case "+":
+                     result += user[counter]
+                     break;
+                case "*":
+                     result *= user[counter]
+                     break;
+                case "/":
+                     result /= user[counter]
+                     break;
+                default:
+                    document.write("undefind");
+
+            }
+            
+        }
+        return result
+    }
+    document.write(`<h1>Adding-Multiplying-and dividing values</h1><hr>  `  )
+    document.write(`<p>sum of the  values  ${user.join("+")} = ${calc("+")} </p>`)
+    document.write(`<p>sum of the  values  ${user.join("*")} = ${calc("*")} </p>`)
+    document.write(`<p>sum of the  values  ${user.join("/")} = ${calc("/")} </p>`)
+    </script>
+
+    </script>
+</body>
+</html>

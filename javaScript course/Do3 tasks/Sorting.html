@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting</title>
+</head>
+<style>
+    h1{
+        font-size: 30px;
+        color: darkslategrey; 
+    }
+  body{
+      color: darkred;
+      font-size: 30px;
+    }
+</style>
+<body>
+    <script>
+        let array = [];
+
+        for(let i = 0; i <5; i++){
+            array.push(prompt("please enter the values"));
+        }
+
+        document.write("<h1>Sorting</h1>")
+        document.write(`<p>u've entered the values of : ${array} </p>`)
+        document.write(`<p>ur values after being sorted descending : ${array.sort()} </p>`)
+        document.write(`<p>ur values after being sorted ascending : ${array.reverse()} </p>`)
+
+    </script>
+</body>
+</html>
